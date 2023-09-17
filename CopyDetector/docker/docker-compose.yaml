@@ -1,0 +1,44 @@
+version: "3"
+services:
+  process1:
+    build: ""
+    container_name: process1
+    environment:
+      GROUP_ADDRESS: 224.0.0.0
+      GROUP_PORT: 12345
+    networks:
+      - test-network
+  process2:
+    build: ""
+    container_name: process2
+    environment:
+      GROUP_ADDRESS: 224.0.0.0
+      GROUP_PORT: 12345
+    networks:
+      - test-network
+  process3:
+    build: ""
+    container_name: process3
+    environment:
+      GROUP_ADDRESS: 224.0.0.0
+      GROUP_PORT: 12345
+    networks:
+      - test-network
+  process4:
+    build: ""
+    container_name: process4
+    environment:
+      GROUP_ADDRESS: 224.0.0.0
+      GROUP_PORT: 12345
+    networks:
+      - test-network
+networks:
+  test-network:
+    enable_ipv6: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
+        - subnet: 2001:0DB8::/112
+          gateway: 2001:0DB8::1
