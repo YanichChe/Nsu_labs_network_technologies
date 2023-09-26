@@ -37,6 +37,7 @@ public class MulticastReceiver implements Runnable {
 
                 String[] parts = message.split(" ");
                 if (parts.length == 2 && parts[0].equals("password")) {
+                    if (packet.getAddress().equals(socket.getInetAddress()) && packet.getPort() == socket.getPort()) break;
                     MemberData memberData = new MemberData(packet.getAddress(), packet.getPort(), parts[1]);
                     multicastHandler.addNewMember(memberData);
                 }
