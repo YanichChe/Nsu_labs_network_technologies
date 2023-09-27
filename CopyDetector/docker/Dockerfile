@@ -1,4 +1,4 @@
-FROM amazoncorretto:16
+FROM amazoncorretto:17
 
 ADD copy-detector-1.0.0-jar-with-dependencies.jar copy-detector-1.0.0-jar-with-dependencies.jar
 
