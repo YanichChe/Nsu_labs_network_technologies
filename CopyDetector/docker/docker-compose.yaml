@@ -20,7 +20,7 @@ services:
     build: ""
     container_name: process3
     environment:
-      GROUP_ADDRESS: 224.0.0.0
+      GROUP_ADDRESS: 224.0.0.1
       GROUP_PORT: 12345
     networks:
       - test-network
@@ -28,7 +28,7 @@ services:
     build: ""
     container_name: process4
     environment:
-      GROUP_ADDRESS: 224.0.0.0
+      GROUP_ADDRESS: 224.0.0.1
       GROUP_PORT: 12345
     networks:
       - test-network
